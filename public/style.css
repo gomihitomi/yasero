@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
+}
+.title {
+  line-height: 1;
+  text-align: center;
+}
+td,
+.wrapper {
+  border: 0;
+  text-align: center;
+  position: relative;
+}
+td:last-of-type {
+  width: 70%;
+}
+table {
+  margin: 0;
+}
+img {
+  width: 4em;
+  margin-right: 0.5em;
+}
+h1 {
+  line-height: 1;
+  margin: 0;
+}
+article {
+  padding: 0;
+}
+table {
+  border: 1px solid var(--border);
+  border-right: 0;
+  border-left: 0;
+  width: 100%;
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+}
+#canvas {
+  width: 100%;
+  max-width: 400px;
+}

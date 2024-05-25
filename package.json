@@ -1,0 +1,8 @@
+{
+  "name": "yasero",
+  "version": "1.0.0",
+  "description": "痩せたいね",
+  "scripts": {
+    "fetch-data": "node src/fetch-data.js"
+  }
+}
