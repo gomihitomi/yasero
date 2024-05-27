@@ -3,7 +3,7 @@ const fs = require("fs");
 async function fetchData() {
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzlDWlIUNmCgLMFxUGW7eE9WLZRVtYVZ5LfTRX1m8BhS313caAfshEeAtASiedG3QgkwQ/exec"
+      "https://script.google.com/macros/s/AKfycbwaCv8lka1NlQzwG7sAAsOzhzZ2yRrFGuscJQdwGsYWHFSf0xlOqKMEmB1MPLtKdvemUw/exec"
     );
     const data = await response.json();
 
