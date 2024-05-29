@@ -31,7 +31,7 @@ function drawSvg(json) {
   const diffs = datas.reduce((p, n, i) => [...p, p[i] + n], [10]);
 
   const paths = datas.map((v, i) => {
-    const x = i * 120 + 40;
+    const x = i * 80 + 40;
     const y = 1000 - diffs[i + 1] * 80;
     const value = (v > 0 && "+") + v;
     return { x, y, value };
