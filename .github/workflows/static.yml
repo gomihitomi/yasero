@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 
 on:
   schedule:
-    - cron: "55 2 * * *" # 日本時間で 11:55 に更新
+    - cron: "15 2 * * *" # 日本時間で 11:15 に更新
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]

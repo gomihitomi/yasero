@@ -66,3 +66,9 @@ function drawSvg(json) {
     ctx.fill();
   });
 }
+
+const aboutModal = document.getElementById("about-modal");
+const openModal = () => aboutModal.showModal();
+const closeModal = (e) => {
+  if (!e || !e.target.closest(".modal-container")) aboutModal.close();
+};

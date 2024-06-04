@@ -58,11 +58,36 @@
         </div>
       </article>
       <footer>
+        <button onclick="openModal()">#痩せろ吾味人美とは</button>
         <a id="post" href="" target="_blank" rel="”noopener" noreferrer”>
-          Xにポストして吾味人美を応援する
+          <button>Xにポスト</button>
         </a>
       </footer>
     </main>
+    <dialog id="about-modal" autofocus onclick="closeModal(event)">
+      <div class="modal-container">
+        <div class="modal-section">
+          <span>#痩せろ吾味人美とは</span>
+          <span
+            >いつの間にか滅茶苦茶に太っていた吾味人美の体重推移が見れるだけのサイトです。
+          </span>
+        </div>
+        <div class="modal-section">
+          <span>痩せる為にしていること</span>
+          <span
+            >主に以下の3つです。
+            ・基礎代謝分のカロリーを目安に、PFCバランス3:2:4の食事を摂る
+            ・週5以上の頻度で有酸素運動を1時間以上実施する
+            ・7時間以上の睡眠を徹底する
+          </span>
+        </div>
+        <div class="modal-section">
+          <span>始めた理由</span>
+          <span>自分の食欲にムカついたからです。 </span>
+        </div>
+        <button onclick="closeModal()">閉じる</button>
+      </div>
+    </dialog>
     <script src="main.js"></script>
   </body>
 </html>
