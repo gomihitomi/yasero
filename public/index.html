@@ -1,93 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="simple.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>#痩せろ吾味人美</title>
 
-    <meta property="og:title" content="#痩せろ吾味人美" />
-    <meta property="og:site_name" content="#痩せろ吾味人美" />
-    <meta
-      property="og:description"
-      content="設定体重より滅茶苦茶太っている吾味人美のダイエット進捗を見れるだけのサイトです。"
-    />
-    <meta property="og:url" content="https://gomihitomi.github.io/yasero/" />
-    <meta
-      property="og:image"
-      content="https://gomihitomi.github.io/yasero/ogp.png"
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:site" content="@gomihitomi" />
-    <meta name="twitter:creator" content="@gomihitomi" />
-    <meta name="twitter:card" content="summary" />
-  </head>
-  <body>
-    <main>
-      <article>
-        <header>
-          <img src="ekakiuta.png" />
-          <div class="title">
-            <h1>#痩せろ吾味人美</h1>
-            <small>～毎日12時くらいに更新中～</small>
-          </div>
-        </header>
-        <table>
-          <tr>
-            <td>日付</td>
-            <td id="date"></td>
-          </tr>
-          <tr>
-            <td>前日比</td>
-            <td id="prev"></td>
-          </tr>
-          <tr>
-            <td>累計</td>
-            <td id="total"></td>
-          </tr>
-          <tr>
-            <td>コメント</td>
-            <td id="comment"></td>
-          </tr>
-        </table>
-        <div class="wrapper">
-          <canvas id="canvas" width="800" height="400"></canvas>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="simple.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>#痩せろ吾味人美</title>
+
+  <meta property="og:title" content="#痩せろ吾味人美" />
+  <meta property="og:site_name" content="#痩せろ吾味人美" />
+  <meta property="og:description" content="設定体重より滅茶苦茶太っている吾味人美のダイエット進捗を見れるだけのサイトです。" />
+  <meta property="og:url" content="https://gomihitomi.github.io/yasero/" />
+  <meta property="og:image" content="https://gomihitomi.github.io/yasero/ogp.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:site" content="@gomihitomi" />
+  <meta name="twitter:creator" content="@gomihitomi" />
+  <meta name="twitter:card" content="summary" />
+</head>
+
+<body>
+  <main>
+    <article>
+      <header>
+        <img src="ekakiuta.png" />
+        <div class="title">
+          <h1>#痩せろ吾味人美</h1>
+          <small>～毎日12時くらいに更新中～</small>
         </div>
-      </article>
-      <footer>
-        <button onclick="openModal()">#痩せろ吾味人美とは</button>
-        <a id="post" href="" target="_blank" rel="”noopener" noreferrer”>
-          <button>Xにポスト</button>
-        </a>
-      </footer>
-    </main>
-    <dialog id="about-modal" autofocus onclick="closeModal(event)">
-      <div class="modal-container">
-        <div class="modal-section">
-          <span>#痩せろ吾味人美とは</span>
-          <span
-            >いつの間にか滅茶苦茶に太っていた吾味人美の体重推移が見れるだけのサイトです。
-          </span>
-        </div>
-        <div class="modal-section">
-          <span>痩せる為にしていること</span>
-          <span
-            >主に以下の3つです。
-            ・基礎代謝分のカロリーを目安に、PFCバランス3:2:5の食事を摂る
-            ・週5以上の頻度で有酸素運動を1時間以上実施する
-            ・7時間以上の睡眠を徹底する
-          </span>
-        </div>
-        <div class="modal-section">
-          <span>始めた理由</span>
-          <span>自分の食欲にムカついたからです。 </span>
-        </div>
-        <button onclick="closeModal()">閉じる</button>
+      </header>
+      <table>
+        <tr>
+          <td>日付</td>
+          <td id="date"></td>
+        </tr>
+        <tr>
+          <td>前日比</td>
+          <td id="prev"></td>
+        </tr>
+        <tr>
+          <td>累計</td>
+          <td id="total"></td>
+        </tr>
+        <tr>
+          <td>コメント</td>
+          <td id="comment"></td>
+        </tr>
+      </table>
+      <div class="wrapper">
+        <canvas id="canvas" width="800" height="400"></canvas>
       </div>
-    </dialog>
-    <script src="main.js"></script>
-  </body>
+    </article>
+    <footer>
+      <button onclick="openModal()">#痩せろ吾味人美とは</button>
+      <a id="post" href="" target="_blank" rel="”noopener" noreferrer”>
+        <button>ツイートする</button>
+      </a>
+    </footer>
+  </main>
+  <dialog id="about-modal" autofocus onclick="closeModal(event)">
+    <div class="modal-container">
+      <div class="modal-section">
+        <span>#痩せろ吾味人美とは</span>
+        <span>いつの間にか滅茶苦茶に太っていた吾味人美の体重推移が見れるだけのサイトです。
+        </span>
+      </div>
+      <div class="modal-section">
+        <span>痩せる為にしていること</span>
+        <span>主に以下の3つです。
+          ・基礎代謝分のカロリーを目安に、PFCバランス3:2:5の食事を摂る
+          ・週5以上の頻度で有酸素運動を1時間以上実施する
+          ・7時間以上の睡眠を徹底する
+        </span>
+      </div>
+      <div class="modal-section">
+        <span>始めた理由</span>
+        <span>自分の食欲にムカついたからです。 </span>
+      </div>
+      <button onclick="closeModal()">閉じる</button>
+    </div>
+  </dialog>
+  <script src="main.js"></script>
+</body>
+
 </html>
